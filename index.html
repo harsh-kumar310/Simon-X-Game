@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon says Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <div id="background-overlay"></div>
+
+    <h1>Simon says Game</h1>
+    <!-- ✅ HOW TO PLAY BOX -->
+<div id="rules-box">
+  <h3>How to Play </h3>
+  <ul id="rule">
+    <li>Press any key to start the game.</li>
+    <li>Watch the color sequence carefully.</li>
+    <li>Click the buttons in the same order.</li>
+    <li>Each level adds one more color to the sequence.</li>
+    <li>If you press the wrong color, game will be over.</li>
+    <li>Try to beat your highest score!</li>
+  </ul>
+</div>
+
+    <div class="theme-switcher">
+        <button data-theme="light">Color</button>
+        <button data-theme="dark">Dark</button>
+         <!-- 🎯 New User Info + Leaderboard Box -->
+  <div id="leaderboard-box">
+  <div class="leaderboard-header">
+    <h3>Leaderboard</h3>
+   
+  </div>
+  <ul id="leaderboard-list"></ul>
+</div>
+
+    </div>
+      <h2>Press any key to start the Game</h2> 
+      <!-- --- Username Input Box --- -->
+<div id="name-input-box" class="popup">
+  <div class="popup-content">
+    <h2>Enter Your Name</h2>
+    <input type="text" id="username" placeholder="Your name" />
+    <button id="start-btn">Start Game</button>
+  </div>
+</div>
+
+<!-- --- Leaderboard --- -->
+<div id="leaderboard" class="hidden">
+  <h3>Leaderboard</h3>
+  <ul id="leaderboard-list"></ul>
+</div>
+
+      <p id="high-score-p">Highest Score: 0</p> 
+
+      <div id="game-over-screen" class="hidden">
+        <div class="game-over-box">
+            <h1>Game Over</h1>
+            <p>Your Score: <span id="final-score">0</span></p>
+            <p>High Score: <span id="final-high-score">0</span></p>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+
+      <div class="btn-container">
+        <div class="line-one">
+            <div class="btn red" id="red"><b>1</b></div>
+            <div class="btn yellow" id="yellow"><b>2</b></div>
+        </div>
+        <div class="line-two">
+            <div class="btn green" id="green"><b>3</b></div>
+            <div class="btn purple" id="purple"><b>4</b></div>
+        </div>
+      </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
